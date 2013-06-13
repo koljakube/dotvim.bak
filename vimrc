@@ -1,6 +1,5 @@
 " Vim Configuration File
 
-" --
 " Setup pathogen - this needs to be done first
 runtime bundle/pathogen/autoload/pathogen.vim
 " Use the following to temporarily disable plugins
