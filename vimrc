@@ -133,6 +133,14 @@ map <Leader>a: :Tab /:\zs<CR>
 
 
 ""
+" Taglist configuration
+""
+
+let Tlist_GainFocus_On_ToggleOpen=1
+nnoremap <silent> <Leader>. :TlistToggle<CR>
+
+
+""
 " Status line configuration
 ""
 
