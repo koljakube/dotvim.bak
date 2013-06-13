@@ -91,6 +91,7 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
+
 ""
 " Syntastic configuration
 ""
@@ -102,4 +103,11 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 " Show signs next to lines
 let g:syntastic_enable_signs = 1
+
+
+""
+" CtrlP.vim configuration
+""
+
+let g:ctrlp_map = '<C-p>'
 
