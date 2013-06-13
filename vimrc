@@ -122,3 +122,13 @@ map <Leader>t :NERDTreeToggle<CR>
 " Be on the right side like in my TextMate
 let g:NERDTreeWinPos = "right"
 
+
+""
+" Tabular configuration
+""
+
+map :Tab :Tabularize
+map <Leader>a= :Tab /=<CR>
+map <Leader>a: :Tab /:\zs<CR>
+
+
