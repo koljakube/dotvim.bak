@@ -83,13 +83,13 @@ inoremap <C-t>           :tabnew<CR>
 nmap \o :set paste!<CR>
 
 " Activate and configure omni complete
-set ofu=syntaxcomplete#Complete
-set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+"set ofu=syntaxcomplete#Complete
+"set completeopt=longest,menuone
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  "\ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+"inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  "\ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 
 ""
@@ -138,6 +138,16 @@ map <Leader>a: :Tab /:\zs<CR>
 
 let Tlist_GainFocus_On_ToggleOpen=1
 nnoremap <silent> <Leader>. :TlistToggle<CR>
+
+
+""
+" UltiSnips configuration
+""
+
+" By default, UltiSnips and YouCompleteMe share the same bindings
+let g:ycm_key_list_previouscompletion=['<Up>']
+let g:UltiSnipsExpandTrigger="<Leader><Tab>"
+let g:UltiSnipsListSnippets="<Leader><S-Tab>"
 
 
 ""
