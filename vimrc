@@ -91,3 +91,15 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
+""
+" Syntastic configuration
+""
+
+" Check all supported languages by default
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['ruby'],
+                           \ 'passive_filetypes': [] }
+
+" Show signs next to lines
+let g:syntastic_enable_signs = 1
+
