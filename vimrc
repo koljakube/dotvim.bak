@@ -54,3 +54,31 @@ let g:solarized_visibility = "high"
 "let g:solarized_contrast   = "high"
 colorscheme solarized
 
+" Highlight the current line
+set cursorline
+
+" Better searching
+set incsearch  " search while typing
+set ignorecase " case matters only when at least one
+set smartcase  "   capital letter is included in the query
+set hlsearch   " highlight search results
+
+" Move in visual, not actual, lines
+nmap j gj
+nmap k gk
+
+" Something like TextMate's Cmd+Enter
+inoremap <Leader><CR> <C-O>o
+nnoremap <Leader><CR> o
+
+" Easier tab navigation
+nnoremap <Leader><S-Tab> :tabprev<CR>
+nnoremap <Leader><Tab>   :tabnext<CR>
+nnoremap <C-t>           :tabnew<CR>
+inoremap <Leader><S-Tab> <Esc>:tabprev<CR>i
+inoremap <Leader><Tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>           :tabnew<CR>
+
+" Paste mode shortcut
+nmap \o :set paste!<CR>
+
