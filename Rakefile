@@ -6,4 +6,8 @@ task :link do
   exec 'cd ~/.vim; git submodule init; git submodule update'
 end
 
+task :compile_ycm do
+  exec 'cd ~/.vim/bundle/youcompleteme; ./install.sh --clang-completer'
+end
+
 task :default => :link
