@@ -111,3 +111,14 @@ let g:syntastic_enable_signs = 1
 
 let g:ctrlp_map = '<C-p>'
 
+
+""
+" NERDtree configuration
+""
+
+" Easily toggle it on and off
+map <Leader>t :NERDTreeToggle<CR>
+
+" Be on the right side like in my TextMate
+let g:NERDTreeWinPos = "right"
+
