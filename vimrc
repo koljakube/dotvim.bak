@@ -34,3 +34,23 @@ set title
 " Map escape to something on the homerow
 inoremap jj <Esc>
 
+" Set leader key
+let mapleader = ","
+let g:mapleader = ","
+
+" Turn off backups (we have version control)
+set nobackup
+set nowb
+set noswapfile
+
+" Quickly toggle line numbering in normal mode
+nmap <Leader>l :setlocal number!<CR>
+set number
+
+" Set up a nice colorscheme
+set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+"let g:solarized_contrast   = "high"
+colorscheme solarized
+
