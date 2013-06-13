@@ -12,3 +12,25 @@ if $SHELL =~ 'fish'
   set shell=/bin/bash
 endif
 
+" Turn on syntax highlighting
+syntax on
+filetype plugin indent on
+
+" Set indentation to the only correct way ;-)
+set tabstop=2
+set expandtab
+set shiftwidth=2
+
+" Automatic and smart indentation
+set autoindent
+set smartindent
+
+" Show matching braces
+set showmatch
+
+" Show title in terminal title bar
+set title
+
+" Map escape to something on the homerow
+inoremap jj <Esc>
+
