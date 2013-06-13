@@ -132,3 +132,30 @@ map <Leader>a= :Tab /=<CR>
 map <Leader>a: :Tab /:\zs<CR>
 
 
+""
+" Status line configuration
+""
+
+hi User1 ctermfg=black guifg=black ctermbg=cyan
+hi User2 ctermfg=green guifg=blue  ctermbg=cyan
+hi User3 ctermfg=white guifg=white ctermbg=red  guibg=red
+set statusline=%1*
+set statusline+=\ %f\                                    " file name and path
+set statusline+=%2*
+set statusline+=%y
+set statusline+=%r                                       " readonly flag
+set statusline+=%m\                                      " modified flag
+set statusline+=%1*
+" Git information
+set statusline+=%{fugitive#statusline()}
+" Syntastic information
+set statusline+=%3*
+set statusline+="   "
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%1*
+" Right side
+set statusline+=%=
+set statusline+=(%P)\                                    " percentage through the file
+set statusline+=%l/%L,%c%V\                              " line and column number
+set statusline+=%1*
+
