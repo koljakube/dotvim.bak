@@ -104,6 +104,10 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " Show signs next to lines
 let g:syntastic_enable_signs = 1
 
+" Enable secure, per-project .vimrc files
+set exrc
+set secure
+
 
 ""
 " CtrlP.vim configuration
