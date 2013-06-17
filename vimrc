@@ -77,7 +77,7 @@ nnoremap <Leader><Tab>   :tabnext<CR>
 nnoremap <C-t>           :tabnew<CR>
 inoremap <Leader><S-Tab> <Esc>:tabprev<CR>i
 inoremap <Leader><Tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>           :tabnew<CR>
+inoremap <C-t>           <Esc>:tabnew<CR>
 
 " Paste mode shortcut
 nmap \o :set paste!<CR>
