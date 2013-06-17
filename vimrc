@@ -108,6 +108,9 @@ let g:syntastic_enable_signs = 1
 set exrc
 set secure
 
+" Enable mouse mode
+set mouse=a
+
 
 ""
 " CtrlP.vim configuration
