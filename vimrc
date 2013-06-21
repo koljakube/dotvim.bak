@@ -111,6 +111,12 @@ nmap \o :set paste!<CR>
 "inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   "\ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
+" Faster window switching
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 
 ""
 " Syntastic configuration
