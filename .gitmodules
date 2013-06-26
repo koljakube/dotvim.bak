@@ -58,3 +58,6 @@
 [submodule "bundle/ruby-refactoring"]
 	path = bundle/ruby-refactoring
 	url = https://github.com/rking/vim-ruby-refactoring.git
+[submodule "bundle/delimitmate"]
+	path = bundle/delimitmate
+	url = https://github.com/Raimondi/delimitMate.git
