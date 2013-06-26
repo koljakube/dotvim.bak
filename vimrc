@@ -82,6 +82,7 @@ set incsearch  " search while typing
 set ignorecase " case matters only when at least one
 set smartcase  "   capital letter is included in the query
 set hlsearch   " highlight search results
+nmap <silent> <Leader>h :nohlsearch<CR>
 
 " Move in visual, not actual, lines
 nmap j gj
