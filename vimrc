@@ -67,6 +67,9 @@ set noswapfile
 nmap <Leader>l :setlocal number!<CR>
 set number
 
+" Silence the visual bell because iTerm2's is so distracting
+set visualbell
+
 " Set up a nice colorscheme
 set background=dark
 let g:solarized_termcolors = 256
