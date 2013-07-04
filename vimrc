@@ -93,7 +93,9 @@ nmap k gk
 
 " Something like TextMate's Cmd+Enter
 inoremap <Leader><CR> <C-O>o
+inoremap <Leader><S-CR> <C-O>k<C-O>o
 nnoremap <Leader><CR> o
+nnoremap <Leader><S-CR> ko
 
 " Easier tab navigation
 nnoremap <Leader><S-Tab> :tabprev<CR>
