@@ -260,9 +260,11 @@ nnoremap <silent> <Leader>. :TlistToggle<CR>
 ""
 
 " By default, UltiSnips and YouCompleteMe share the same bindings
-let g:ycm_key_list_previouscompletion=['<Up>']
-let g:UltiSnipsExpandTrigger="<Leader><Tab>"
-let g:UltiSnipsListSnippets="<Leader><S-Tab>"
+let g:ycm_key_list_previous_completion=['<Up>']
+let g:ycm_key_list_select_completion=['<Down>']
+let g:ycm_key_invoke_completion = '<C-Space>'
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsListSnippets="<S-Tab>"
 
 
 ""
