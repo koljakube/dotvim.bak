@@ -38,6 +38,7 @@ filetype plugin indent on
 
 " Set indentation to the only correct way ;-)
 set tabstop=2
+set softtabstop=2
 set expandtab
 set shiftwidth=2
 
