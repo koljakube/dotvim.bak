@@ -1,0 +1,65 @@
+global !p
+import os, random
+
+def snake_to_upper_camel_case(snake):
+  return "".join([p.capitalize() for p in snake.split('_')])
+
+def namespace_name(path):
+  directory, filename = os.path.split(path)
+  rest, topleveldir   = os.path.split(directory)
+  return topleveldir.lower()
+
+def randstring(length):
+  chars = "0123456789ABCDEF"
+  result = ""
+  while len(result) < length:
+    result += random.choice(chars)
+  return result
+
+def include_guard(filename):
+  basename, extname = os.path.splitext(filename)
+  return "_GUARD_" + basename.upper() + "_" + extname[1:].upper() + "_" + randstring(6) + "_"
+
+def class_name(filename):
+  basename, extname = os.path.splitext(filename)
+  return snake_to_upper_camel_case(basename)
+
+def header_for(filename):
+  basename, extname = os.path.splitext(filename)
+  return basename + ".hpp"
+
+endglobal
+
+snippet headerfile "fill in a cpp class header file template"
+#ifndef ${1:`!p if not snip.c: snip.rv = include_guard(fn)`}
+#define $1
+
+namespace ${2:`!p snip.rv = namespace_name(path)`} \{
+
+class ${3:`!p snip.rv = class_name(fn)`}
+
+  public:
+
+    $3();
+    virtual ~$3();
+
+  private:
+
+    $0
+
+\}
+
+#endif $1
+
+endsnippet
+
+snippet sourcefile "fill in a cpp class source file template"
+#include "${1:`!p snip.rv = header_for(fn)`}"
+
+${2:`!p if not snip.c: snip.rv = class_name(fn)`}::$2() {
+}
+
+$2::~$2() {
+}
+
+endsnippet
