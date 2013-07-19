@@ -34,32 +34,36 @@ snippet headerfile "fill in a cpp class header file template"
 #ifndef ${1:`!p if not snip.c: snip.rv = include_guard(fn)`}
 #define $1
 
-namespace ${2:`!p snip.rv = namespace_name(path)`} \{
+namespace ${2:`!p snip.rv = namespace_name(path)`} {
 
 class ${3:`!p snip.rv = class_name(fn)`}
 
-  public:
+public:
 
-    $3();
-    virtual ~$3();
+	$3();
+	virtual ~$3();
 
-  private:
+private:
 
-    $0
+	$0
 
-\}
+};
 
-#endif $1
+#endif
 
 endsnippet
 
 snippet sourcefile "fill in a cpp class source file template"
 #include "${1:`!p snip.rv = header_for(fn)`}"
 
-${2:`!p if not snip.c: snip.rv = class_name(fn)`}::$2() {
+namespace ${2:`!p snip.rv = namespace_name(path)`}{
+
+${3:`!p if not snip.c: snip.rv = class_name(fn)`}::$3() {
 }
 
-$2::~$2() {
+$3::~$3() {
+}
+
 }
 
 endsnippet
