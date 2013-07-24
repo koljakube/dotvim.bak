@@ -71,6 +71,11 @@ set number
 " Silence the visual bell because iTerm2's is so distracting
 set visualbell
 
+" Highlight trailing whitespace (should be before colorscheme)
+autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd InsertLeave * redraw! " show trailing whitespace immediately after leaving insert
+
 " Set up a nice colorscheme
 set background=dark
 let g:solarized_termcolors = 256
