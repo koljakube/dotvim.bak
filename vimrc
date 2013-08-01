@@ -93,6 +93,9 @@ set smartcase  "   capital letter is included in the query
 set hlsearch   " highlight search results
 nmap <silent> <Leader>h :nohlsearch<CR>
 
+" Enable syntax-based code folding
+set foldmethod=syntax
+
 " Move in visual, not actual, lines
 nmap j gj
 nmap k gk
