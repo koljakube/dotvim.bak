@@ -284,6 +284,15 @@ let g:UltiSnipsListSnippets="<S-Tab>"
 
 
 ""
+" Eclim configuration
+""
+
+nnoremap <silent> <Leader>i :JavaImport<CR>
+nnoremap <silent> <Leader>jd :JavaDocSearch -x declarations<CR>
+
+
+
+""
 " Status line configuration
 ""
 
