@@ -106,6 +106,13 @@ inoremap <Leader><S-CR> <C-O>k<C-O>o
 nnoremap <Leader><CR> o
 nnoremap <Leader><S-CR> ko
 
+" Spellchecking
+set spelllang=en_US
+autocmd BufRead,BufNewFile *.md setlocal spell
+nmap <silent> <Leader>st :setlocal spell!<CR>
+nmap <silent> <Leader>sg :setlocal spelllang=de_20<CR>
+nmap <silent> <Leader>se :setlocal spelllang=en_us<CR>
+
 " Easier tab navigation
 nnoremap <Leader><S-Tab> :tabprev<CR>
 nnoremap <Leader><Tab>   :tabnext<CR>
