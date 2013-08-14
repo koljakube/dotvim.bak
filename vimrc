@@ -5,19 +5,27 @@ runtime bundle/pathogen/autoload/pathogen.vim
 " Use the following to temporarily disable plugins
 let g:pathogen_disabled = []
 "call add(g:pathogen_disabled, 'plugindirectoryname')
+
 "call add(g:pathogen_disabled, 'bundler')
 "call add(g:pathogen_disabled, 'coffee-script')
 "call add(g:pathogen_disabled, 'colorscheme-solarized')
 call add(g:pathogen_disabled, 'covim')
 "call add(g:pathogen_disabled, 'ctrlp')
+"call add(g:pathogen_disabled, 'delimitmate')
+"call add(g:pathogen_disabled, 'eclim')
+"call add(g:pathogen_disabled, 'fish')
 "call add(g:pathogen_disabled, 'fugitive')
 "call add(g:pathogen_disabled, 'localvimrc')
+"call add(g:pathogen_disabled, 'markdown')
 "call add(g:pathogen_disabled, 'multiple-cursors')
 "call add(g:pathogen_disabled, 'nerdcommenter')
 "call add(g:pathogen_disabled, 'nerdtree')
+"call add(g:pathogen_disabled, 'nerdtree-tabs')
 "call add(g:pathogen_disabled, 'pathogen')
 "call add(g:pathogen_disabled, 'ragtag')
 "call add(g:pathogen_disabled, 'rails')
+"call add(g:pathogen_disabled, 'ruby-refactoring')
+"call add(g:pathogen_disabled, 'scss-syntax')
 "call add(g:pathogen_disabled, 'sensible')
 "call add(g:pathogen_disabled, 'surround')
 "call add(g:pathogen_disabled, 'syntastic')
@@ -25,6 +33,7 @@ call add(g:pathogen_disabled, 'covim')
 "call add(g:pathogen_disabled, 'taglist')
 "call add(g:pathogen_disabled, 'ultisnips')
 "call add(g:pathogen_disabled, 'youcompleteme')
+
 execute pathogen#infect()
 
 " Make Vim not use fish (they don't work well together)
@@ -130,84 +139,8 @@ nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
 
-"set tabline=%!MyTabLine()
-"function MyTabLine()
-  "let s = '' " complete tabline goes here
-  "" loop through each tab page
-  "for t in range(tabpagenr('$'))
-    "" select the highlighting for the buffer names
-    "if t + 1 == tabpagenr()
-      "let s .= '%#TabLineSel#'
-    "else
-      "let s .= '%#TabLine#'
-    "endif
-    "" empty space
-    "let s .= ' '
-    "" set the tab page number (for mouse clicks)
-    "let s .= '%' . (t + 1) . 'T'
-    "" set page number string
-    "let s .= t + 1 . ' '
-    "" get buffer names and statuses
-    "let n = ''  "temp string for buffer names while we loop and check buftype
-    "let m = 0 " &modified counter
-    "let bc = len(tabpagebuflist(t + 1))  "counter to avoid last ' '
-    "" loop through each buffer in a tab
-    "for b in tabpagebuflist(t + 1)
-      "" buffer types: quickfix gets a [Q], help gets [H]{base fname}
-      "" others get 1dir/2dir/3dir/fname shortened to 1/2/3/fname
-      "if getbufvar( b, "&buftype" ) == 'help'
-        "let n .= '[H]' . fnamemodify( bufname(b), ':t:s/.txt$//' )
-      "elseif getbufvar( b, "&buftype" ) == 'quickfix'
-        "let n .= '[Q]'
-      "else
-        "let n .= pathshorten(bufname(b))
-        ""let n .= bufname(b)
-      "endif
-      "" check and ++ tab's &modified count
-      "if getbufvar( b, "&modified" )
-        "let m += 1
-      "endif
-      "" no final ' ' added...formatting looks better done later
-      "if bc > 1
-        "let n .= ' '
-      "endif
-      "let bc -= 1
-    "endfor
-    "" add modified label [n+] where n pages in tab are modified
-    "if m > 0
-      ""let s .= '[' . m . '+]'
-      "let s.= '+ '
-    "endif
-    "" add buffer names
-    "if n == ''
-      "let s .= '[No Name]'
-    "else
-      "let s .= n
-    "endif
-    "" switch to no underlining and add final space to buffer list
-    ""let s .= '%#TabLineSel#' . ' '
-    "let s .= ' '
-  "endfor
-  "" after the last tab fill with TabLineFill and reset tab page nr
-  "let s .= '%#TabLineFill#%T'
-  "" right-align the label to close the current tab page
-  "if tabpagenr('$') > 1
-    "let s .= '%=%#TabLine#%999XX'
-  "endif
-  "return s
-"endfunction
-
 " Paste mode shortcut
 nmap \o :set paste!<CR>
-
-" Activate and configure omni complete
-"set ofu=syntaxcomplete#Complete
-"set completeopt=longest,menuone
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-"inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  "\ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-"inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-  "\ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 " Faster window switching
 map <C-h> <C-w>h
