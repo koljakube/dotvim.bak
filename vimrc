@@ -148,6 +148,16 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Strip trailing whitespace on save
+function StripTrailingWhitespace()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfunction
+
+autocmd FileType c,cpp,java,php,ruby,python,coffee autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+
 
 ""
 " Syntastic configuration
