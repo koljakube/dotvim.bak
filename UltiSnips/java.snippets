@@ -4,15 +4,15 @@ def upcase_first_letter(str):
 endglobal
 
 snippet xg "attribute getter"
-${1:int} get${2:Attribute}() { return this.${2/.*/\l$0/}; }$0
+public ${1:int} get${2:Attribute}() { return this.${2/.*/\l$0/}; }$0
 endsnippet
 
 snippet xs "attribute setter"
-void set${1:Attribute}(${2:int} ${1/.*/\l$0/}) { this.${1/.*/\l$0/} = ${1/.*/\l$0/} }$0
+public void set${1:Attribute}(${2:int} ${1/.*/\l$0/}) { this.${1/.*/\l$0/} = ${1/.*/\l$0/} }$0
 endsnippet
 
 snippet xsg "attribute setter and getter"
-${1:int} get${2:Attribute}() { return this.${2/.*/\l$0/}; }
-void set$2($1 ${2/.*/\l$0/}) { this.${2/.*/\l$0/} = ${2/.*/\l$0/} }$0
+public ${1:int} get${2:Attribute}() { return this.${2/.*/\l$0/}; }
+public void set$2($1 ${2/.*/\l$0/}) { this.${2/.*/\l$0/} = ${2/.*/\l$0/} }$0
 endsnippet
 
