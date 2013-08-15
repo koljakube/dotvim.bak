@@ -68,6 +68,13 @@ inoremap jj <Esc>
 let mapleader = ","
 let g:mapleader = ","
 
+" Quickly edit this file
+nmap <silent> <Leader>ve :edit $MYVIMRC<CR>
+nmap <silent> <Leader>vs :source $MYVIMRC<CR>
+
+" Save the shift key in normal mode
+nmap ; :
+
 " Turn off backups (we have version control)
 set nobackup
 set nowb
@@ -149,7 +156,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Strip trailing whitespace on save
-function StripTrailingWhitespace()
+function! StripTrailingWhitespace()
   let l = line(".")
   let c = col(".")
   %s/\s\+$//e
