@@ -101,6 +101,8 @@ colorscheme solarized
 
 " Highlight the current line
 set cursorline
+" This setting makes the slowdown more bearable
+set ttyfast
 
 " Better searching
 set incsearch  " search while typing
