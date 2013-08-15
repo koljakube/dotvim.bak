@@ -241,6 +241,12 @@ nnoremap <silent> <Leader>i :JavaImport<CR>
 nnoremap <silent> <Leader>jd :JavaDocSearch -x declarations<CR>
 
 
+""
+" YankRing configuration
+""
+
+nnoremap <Leader>ys :YRShow<CR>
+
 
 ""
 " Status line configuration
