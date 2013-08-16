@@ -32,6 +32,7 @@ call add(g:pathogen_disabled, 'covim')
 "call add(g:pathogen_disabled, 'tabular')
 "call add(g:pathogen_disabled, 'taglist')
 "call add(g:pathogen_disabled, 'ultisnips')
+"call add(g:pathogen_disabled, 'yankring')
 "call add(g:pathogen_disabled, 'youcompleteme')
 
 execute pathogen#infect()
@@ -79,6 +80,9 @@ nmap ; :
 set nobackup
 set nowb
 set noswapfile
+
+" Make backspace delete more
+set backspace=indent,eol,start
 
 " Quickly toggle line numbering in normal mode
 nmap <Leader>l :setlocal number!<CR>
@@ -192,7 +196,7 @@ set mouse=a
 " CtrlP.vim configuration
 ""
 
-let g:ctrlp_map = '<C-p>'
+let g:ctrlp_map = '<C-r>'
 
 
 ""
@@ -241,6 +245,8 @@ let g:UltiSnipsListSnippets="<S-Tab>"
 
 nnoremap <silent> <Leader>i :JavaImport<CR>
 nnoremap <silent> <Leader>jd :JavaDocSearch -x declarations<CR>
+
+let g:EclimCompletionMethod = 'omnifunc'
 
 
 ""
