@@ -16,3 +16,7 @@ public ${1:int} get${2:Attribute}() { return this.${2/.*/\l$0/}; }
 public void set$2($1 ${2/.*/\l$0/}) { this.${2/.*/\l$0/} = ${2/.*/\l$0/}; }$0
 endsnippet
 
+snippet lgr "log4j logger definition"
+private static org.apache.logging.log4j.Logger logger = org.apache.logging.log4j.LogManager.getLogger(${1:ClassName}.class.getName());$0
+endsnippet
+
