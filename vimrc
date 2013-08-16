@@ -117,6 +117,7 @@ nmap <silent> <Leader>h :nohlsearch<CR>
 
 " Enable syntax-based code folding
 set foldmethod=syntax
+autocmd BufReadPre *.coffee setlocal foldmethod=indent
 
 " Move in visual, not actual, lines
 nmap j gj
