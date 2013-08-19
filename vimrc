@@ -117,6 +117,8 @@ nmap <silent> <Leader>h :nohlsearch<CR>
 
 " Enable syntax-based code folding
 set foldmethod=syntax
+" Don't fold on startup
+set foldlevelstart=99
 
 " Move in visual, not actual, lines
 nmap j gj
