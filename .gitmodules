@@ -82,3 +82,6 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/glsl"]
+	path = bundle/glsl
+	url = https://github.com/tikhomirov/vim-glsl.git
