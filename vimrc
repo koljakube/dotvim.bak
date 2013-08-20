@@ -256,6 +256,8 @@ let g:EclimCompletionMethod = 'omnifunc'
 ""
 
 nnoremap <Leader>ys :YRShow<CR>
+let g:yankring_history_dir  = $HOME
+let g:yankring_history_file = '.yankring_history'
 
 
 ""
