@@ -198,7 +198,8 @@ set mouse=a
 " CtrlP.vim configuration
 ""
 
-let g:ctrlp_map = '<C-r>'
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_extensions = []
 
 
 ""
@@ -258,6 +259,8 @@ let g:EclimCompletionMethod = 'omnifunc'
 nnoremap <Leader>ys :YRShow<CR>
 let g:yankring_history_dir  = $HOME
 let g:yankring_history_file = '.yankring_history'
+
+call insert(g:ctrlp_extensions, 'yankring')
 
 
 ""

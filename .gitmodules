@@ -114,3 +114,6 @@
 	path = bundle/glsl
 	url = https://github.com/tikhomirov/vim-glsl.git
   ignore = untracked
+[submodule "bundle/ctrlp-extensions"]
+	path = bundle/ctrlp-extensions
+	url = https://github.com/sgur/ctrlp-extensions.vim.git
