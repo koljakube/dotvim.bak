@@ -180,6 +180,15 @@ imap <Leader>w <C-o>:w<CR>
 nmap <Leader>q :q<CR>
 imap <Leader>q <C-o>:q<CR>
 
+" Make files with shebang line executable on save
+function! MakeFileExecutable(file)
+  if system("ls -l " . a:file . " | ack ^[-d][-r][-w]x[-r][-w]x[-r][-w]x") == ""
+    exec 'silent ! chmod a+x ' . expand(a:file)
+    echomsg "File " . a:file . " is now executable."
+  endif
+endfunction
+au BufWritePost * if getline(1) =~ "^#!" && getline(1) =~ "/bin/" | call MakeFileExecutable(expand("<afile>")) | endif
+
 
 ""
 " Syntastic configuration
