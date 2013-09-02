@@ -172,7 +172,13 @@ function! StripTrailingWhitespace()
   call cursor(l, c)
 endfunction
 
-autocmd FileType c,cpp,java,php,ruby,python,coffee autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+autocmd FileType c,cpp,java,php,ruby,python,coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+
+" Shortcuts for exiting buffers and saving the current file
+nmap <Leader>w :w<CR>
+imap <Leader>w <C-o>:w<CR>
+nmap <Leader>q :q<CR>
+imap <Leader>q <C-o>:q<CR>
 
 
 ""
