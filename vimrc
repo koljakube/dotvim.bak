@@ -306,3 +306,12 @@ set statusline+=(%P)\                                    " percentage through th
 set statusline+=%l/%L,%c%V\                              " line and column number
 set statusline+=%1*
 
+
+" Open NERDTree if no specfic files are opened
+function StartUpOpenNERDTree()
+  if argc() == 0
+    NERDTree
+  end
+endfunction
+autocmd VimEnter * call StartUpOpenNERDTree()
+
