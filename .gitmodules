@@ -117,3 +117,6 @@
 [submodule "bundle/ctrlp-extensions"]
 	path = bundle/ctrlp-extensions
 	url = https://github.com/sgur/ctrlp-extensions.vim.git
+[submodule "bundle/vim2hs"]
+	path = bundle/vim2hs
+	url = https://github.com/dag/vim2hs.git
