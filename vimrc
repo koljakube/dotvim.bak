@@ -281,6 +281,13 @@ call insert(g:ctrlp_extensions, 'yankring')
 
 
 ""
+" vim2hs configuration
+""
+
+"let g:haskell_conceal_wide = 1
+
+
+""
 " Status line configuration
 ""
 
