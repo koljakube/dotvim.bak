@@ -309,7 +309,7 @@ set statusline+=%1*
 
 
 " Open NERDTree if no specfic files are opened
-function StartUpOpenNERDTree()
+function! StartUpOpenNERDTree()
   if argc() == 0
     NERDTree
   end
