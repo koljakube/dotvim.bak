@@ -100,7 +100,8 @@ autocmd InsertLeave * redraw! " show trailing whitespace immediately after leavi
 set background=dark
 let g:solarized_termcolors = 256
 let g:solarized_visibility = "high"
-"let g:solarized_contrast   = "high"
+let g:solarized_contrast   = "high"
+let g:solarized_termtrans  = 1
 colorscheme solarized
 
 " Highlight the current line
