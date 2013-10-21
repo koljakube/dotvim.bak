@@ -36,7 +36,7 @@ snippet headerfile "fill in a cpp class header file template"
 
 namespace ${2:`!p snip.rv = namespace_name(path)`} {
 
-class ${3:`!p snip.rv = class_name(fn)`}
+class ${3:`!p snip.rv = class_name(fn)`} {
 
 public:
 
@@ -49,6 +49,8 @@ private:
 
 };
 
+}
+
 #endif
 
 endsnippet
@@ -56,7 +58,7 @@ endsnippet
 snippet sourcefile "fill in a cpp class source file template"
 #include "${1:`!p snip.rv = header_for(fn)`}"
 
-namespace ${2:`!p snip.rv = namespace_name(path)`}{
+namespace ${2:`!p snip.rv = namespace_name(path)`} {
 
 ${3:`!p if not snip.c: snip.rv = class_name(fn)`}::$3() {
 }
