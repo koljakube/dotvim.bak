@@ -190,6 +190,10 @@ function! MakeFileExecutable(file)
 endfunction
 au BufWritePost * if getline(1) =~ "^#!" && getline(1) =~ "/bin/" | call MakeFileExecutable(expand("<afile>")) | endif
 
+" Block visuals are more useful than vim's default mode
+nnoremap v <C-v>
+nnoremap <C-v> v
+
 
 ""
 " Syntastic configuration
