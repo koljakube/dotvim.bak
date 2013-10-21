@@ -123,3 +123,6 @@
 [submodule "bundle/figlet"]
 	path = bundle/figlet
 	url = https://github.com/vim-scripts/Figlet.vim.git
+[submodule "bundle/dragvisuals"]
+	path = bundle/dragvisuals
+	url = https://github.com/koljakube/vim-dragvisuals.git
