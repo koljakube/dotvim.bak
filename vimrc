@@ -239,9 +239,10 @@ let g:NERDTreeWinPos = "right"
 ""
 
 map :Tab :Tabularize
-map <Leader>a= :Tab /=<CR>
-map <Leader>a: :Tab /:\zs<CR>
-map <Leader>a- :Tab /-><CR>
+map <Leader>a=  :Tab /=<CR>
+map <Leader>a:  :Tab /:\zs<CR>
+map <Leader>a-  :Tab /-><CR>
+map <Leader>a\| :Tab /\|<CR>
 
 
 ""
