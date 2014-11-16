@@ -11,6 +11,7 @@ let g:pathogen_disabled = []
 "call add(g:pathogen_disabled, 'colorscheme-solarized')
 call add(g:pathogen_disabled, 'covim')
 "call add(g:pathogen_disabled, 'ctrlp')
+"call add(g:pathogen_disabled, 'dash')
 "call add(g:pathogen_disabled, 'delimitmate')
 "call add(g:pathogen_disabled, 'eclim')
 "call add(g:pathogen_disabled, 'fish')
@@ -339,4 +340,7 @@ function! StartUpOpenNERDTree()
   end
 endfunction
 autocmd VimEnter * call StartUpOpenNERDTree()
+
+" Quick access for Dash.app
+nmap <silent> <Leader>d <Plug>DashSearch
 
