@@ -217,14 +217,6 @@ set mouse=a
 
 
 ""
-" CtrlP.vim configuration
-""
-
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_extensions = []
-
-
-""
 " NERDtree configuration
 ""
 
@@ -277,12 +269,21 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 
 ""
+" CtrlP.vim configuration
+""
+
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_extensions = []
+
+
+""
 " YankRing configuration
 ""
 
 nnoremap <Leader>ys :YRShow<CR>
 let g:yankring_history_dir  = $HOME
 let g:yankring_history_file = '.yankring_history'
+let g:yankring_replace_n_pkey = '<C-x>'
 
 call insert(g:ctrlp_extensions, 'yankring')
 
