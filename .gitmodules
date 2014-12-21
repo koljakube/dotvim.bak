@@ -126,3 +126,6 @@
 [submodule "bundle/dragvisuals"]
 	path = bundle/dragvisuals
 	url = https://github.com/koljakube/vim-dragvisuals.git
+[submodule "bundle/clang-format"]
+	path = bundle/clang-format
+	url = https://github.com/rhysd/vim-clang-format

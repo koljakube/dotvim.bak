@@ -7,6 +7,7 @@ let g:pathogen_disabled = []
 "call add(g:pathogen_disabled, 'plugindirectoryname')
 
 "call add(g:pathogen_disabled, 'bundler')
+"call add(g:pathogen_disabled, 'clang-format')
 "call add(g:pathogen_disabled, 'coffee-script')
 "call add(g:pathogen_disabled, 'colorscheme-solarized')
 call add(g:pathogen_disabled, 'covim')
@@ -344,4 +345,8 @@ autocmd VimEnter * call StartUpOpenNERDTree()
 
 " Quick access for Dash.app
 nmap <silent> <Leader>d <Plug>DashSearch
+
+" Automatically search for .clang-format files
+let g:clang_format#command="/usr/local/Cellar/llvm35/3.5.0/bin/clang-format-3.5"
+let g:clang_format#detect_style_file=1
 
