@@ -129,3 +129,12 @@
 [submodule "bundle/clang-format"]
 	path = bundle/clang-format
 	url = https://github.com/rhysd/vim-clang-format
+[submodule "bundle/numbertoggle"]
+	path = bundle/numbertoggle
+	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "bundle/stl-syntax"]
+	path = bundle/stl-syntax
+	url = https://github.com/Mizuchi/STL-Syntax.git
+[submodule "bundle/endwise"]
+	path = bundle/endwise
+	url = https://github.com/tpope/vim-endwise.git

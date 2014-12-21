@@ -6,6 +6,7 @@ runtime bundle/pathogen/autoload/pathogen.vim
 let g:pathogen_disabled = []
 "call add(g:pathogen_disabled, 'plugindirectoryname')
 
+"call add(g:pathogen_disabled, 'a')
 "call add(g:pathogen_disabled, 'bundler')
 "call add(g:pathogen_disabled, 'clang-format')
 "call add(g:pathogen_disabled, 'coffee-script')
@@ -15,6 +16,7 @@ call add(g:pathogen_disabled, 'covim')
 "call add(g:pathogen_disabled, 'dash')
 "call add(g:pathogen_disabled, 'delimitmate')
 "call add(g:pathogen_disabled, 'eclim')
+"call add(g:pathogen_disabled, 'endwise')
 "call add(g:pathogen_disabled, 'fish')
 "call add(g:pathogen_disabled, 'fugitive')
 "call add(g:pathogen_disabled, 'localvimrc')
@@ -23,12 +25,14 @@ call add(g:pathogen_disabled, 'covim')
 "call add(g:pathogen_disabled, 'nerdcommenter')
 "call add(g:pathogen_disabled, 'nerdtree')
 "call add(g:pathogen_disabled, 'nerdtree-tabs')
+"call add(g:pathogen_disabled, 'numbertoggle')
 "call add(g:pathogen_disabled, 'pathogen')
 "call add(g:pathogen_disabled, 'ragtag')
 "call add(g:pathogen_disabled, 'rails')
 "call add(g:pathogen_disabled, 'ruby-refactoring')
 "call add(g:pathogen_disabled, 'scss-syntax')
 "call add(g:pathogen_disabled, 'sensible')
+"call add(g:pathogen_disabled, 'stl-syntax')
 "call add(g:pathogen_disabled, 'surround')
 "call add(g:pathogen_disabled, 'syntastic')
 "call add(g:pathogen_disabled, 'tabular')
@@ -350,3 +354,5 @@ nmap <silent> <Leader>d <Plug>DashSearch
 let g:clang_format#command="/usr/local/Cellar/llvm35/3.5.0/bin/clang-format-3.5"
 let g:clang_format#detect_style_file=1
 
+" Search in my usual source locations
+let g:alternateSearchPath = "wdr:src"
